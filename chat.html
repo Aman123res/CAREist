@@ -23,7 +23,7 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 		/>
-		<link rel="stylesheet" href="./chat.html" />
+
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
 	<body>
@@ -42,7 +42,7 @@
 								<li class="current"><a href="index.html">Home</a></li>
 								<li><a href="#page">About</a></li>
 								<li><a href="#features">Features</a></li>
-								<li><a href="./chat.html">CHATS</a></li>
+								<li><a href="#contact">CHATS</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -69,7 +69,7 @@
 		<section id="page" class="about">
 			<div class="container">
 				<div class="row center-xs center-sm center-md center-lg">
-					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="about-us">
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 						<h2><span class="primary-text">ABOUT </span>US</h2>
 
 						<p>
@@ -125,7 +125,6 @@
 										<a
 											href="https://www.youtube.com/playlist?list=PLklhd_AtN_8t8ahSl5lvyGEpMJBNgD59d"
 											class="btn btn-primary"
-											target="_blank"
 											>Enjoy!!</a
 										>
 									</div>
@@ -141,12 +140,7 @@
 									<div class="card-body">
 										<h5 class="card-title">BOOKS</h5>
 										<p class="card-text">Click for Book Suggestions</p>
-										<a
-											target="_blank"
-											href="./books.html"
-											class="btn btn-primary"
-											>Enjoy!!</a
-										>
+										<a href="./books.html" class="btn btn-primary">Enjoy!!</a>
 									</div>
 								</div>
 							</div>
@@ -207,6 +201,23 @@
 				</div>
 			</div>
 		</footer>
-		<script src="./js/chat.js"></script>
+		<script type="text/javascript">
+			(function (d, m) {
+				var kommunicateSettings = {
+					appId: "2c4e59c63b186d58bc61bfc00d9672783",
+					popupWidget: true,
+					automaticChatOpenOnNavigation: true,
+				};
+				var s = document.createElement("script");
+				s.type = "text/javascript";
+				s.async = true;
+				s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+				var h = document.getElementsByTagName("head")[0];
+				h.appendChild(s);
+				window.kommunicate = m;
+				m._globals = kommunicateSettings;
+			})(document, window.kommunicate || {});
+			/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+		</script>
 	</body>
 </html>
